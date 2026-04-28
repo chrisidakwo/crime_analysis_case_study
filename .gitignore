@@ -1,4 +1,12 @@
-src/.env
+.idea
+.env
+
+# Python cache files
+__pycache__/
+.pyc
+
 .DS_Store
+Thumbs.db
+
 /notebooks/*
 /venv

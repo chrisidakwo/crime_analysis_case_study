@@ -14,7 +14,7 @@
 
 The Office of the Illinois Attorney General has launched **Operation Insight** — a data-driven initiative to understand, profile, and respond to crime patterns across the city of Chicago.
 
-For over two decades, the Chicago Police Department has recorded every reported crime incident in the city through its CLEAR (Citizen Law Enforcement Analysis and Reporting) system. That data — spanning from **2001 to the present** and containing over **7 million incident records** — has largely been used for internal police reporting.
+For over two decades, the Chicago Police Department has recorded every reported crime incident in the city through its CLEAR (Citizen Law Enforcement Analysis and Reporting) system. That data — spanning from **2001 to the present** and containing over **8 million incident records** — has largely been used for internal police reporting.
 
 The Attorney General's office believes this data holds far greater value. Used properly, it can:
 
@@ -40,12 +40,12 @@ You will work with real, messy, historical data. You will clean it, explore it, 
 
 ## THE DATASET
 
-| Property | Detail |
-|---|---|
-| **Source** | Chicago Police Department CLEAR System |
-| **Coverage** | 2001 to Present |
-| **Volume** | 7+ million incident records |
-| **Format** | Migrated from CSV to MySQL database |
+| Property | Detail                                                                                 |
+|---|----------------------------------------------------------------------------------------|
+| **Source** | Chicago Police Department CLEAR System                                                 |
+| **Coverage** | 2001 to Present                                                                        |
+| **Volume** | 8+ million incident records                                                            |
+| **Format** | Migrated from CSV to MySQL database                                                    |
 | **Key Fields** | Incident type, date, location, district, arrest outcome, domestic flag, community area |
 
 ### Key Columns Reference

@@ -51,13 +51,17 @@ class DatabaseConnector:
         host = os.getenv("DB_HOST")
         port = os.getenv("DB_PORT", "3306")
         db_name = os.getenv("DB_NAME")
+        db_dialect = os.getenv("DB_DIALECT")
+        db_driver = os.getenv("DB_DRIVER")
 
         # Validate that all required variables are present
         missing = [key for (key, val) in {
             "DB_USER": user,
             "DB_PASSWORD": password,
             "DB_HOST": host,
-            "DB_NAME": db_name
+            "DB_NAME": db_name,
+            "DB_DIALECT": db_dialect,
+            "DB_DRIVER": db_driver,
         }.items() if not val]
 
         if missing:
@@ -68,7 +72,7 @@ class DatabaseConnector:
                 f"Please check your .env file."
             )
 
-        return f"mysql+pymysql://{user}:{password}@{host}:{port}/{db_name}"
+        return f"{db_dialect}+{db_driver}://{user}:{password}@{host}:{port}/{db_name}"
 
     def _create_engine(self):
         """Create and verify the SQLAlchemy engine connection."""

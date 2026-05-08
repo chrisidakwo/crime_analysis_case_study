@@ -28,12 +28,14 @@ class DatabaseConnector:
         """
         Execute a SQL query and return results as a DataFrame.
         This is the most-used method.
+
+        Returns:
+            pd.DataFrame
         """
 
         with self.engine.connect() as conn:
             result = conn.execute(text(sql), params or {})
             return pd.DataFrame(result.fetchall(), columns=result.keys())
-
 
     def _build_connection_string(self) -> str:
         """
@@ -87,15 +89,15 @@ class DatabaseConnector:
 
         return engine
 
-    def __repr__(self):
-        """
-        Return a concise, unambiguous representation of this object.
-        Such that the object can be recreated from the return value.
-
-        This is what Python shows when you print the object directly,
-        place it in a `repr()` function, or inspect it in a list.
-
-        Returns:
-             str: A developer-friendly string representation of this object
-        """
-        return f"DatabaseConnector()"
+    # def __repr__(self):
+    #     """
+    #     Return a concise, unambiguous representation of this object.
+    #     Such that the object can be recreated from the return value.
+    #
+    #     This is what Python shows when you print the object directly,
+    #     place it in a `repr()` function, or inspect it in a list.
+    #
+    #     Returns:
+    #          str: A developer-friendly string representation of this object
+    #     """
+    #     return f"DatabaseConnector()"

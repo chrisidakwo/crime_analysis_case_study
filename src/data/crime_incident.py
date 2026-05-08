@@ -71,6 +71,8 @@ class CrimeIncident:
             return "Violent"
         elif self.is_property_crime():
             return "Property"
+        elif self.primary_type == "NARCOTICS":
+            return "Drug"
         else:
             return "Other"
 

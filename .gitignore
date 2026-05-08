@@ -9,7 +9,6 @@ __pycache__/
 .DS_Store
 Thumbs.db
 
-/notebooks/*
 /venv
 
 /data/raw/Chicago_Crimes_2001_to_Present.csv
